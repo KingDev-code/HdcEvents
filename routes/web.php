@@ -15,7 +15,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return 'AULA DE PW III';
+});
+
+Route::get('/quemsomos', function () {
+    return 'Quem Somos';
+});
+
+Route::get('/contato', function () {
+    return 'contato';
 });
 
 Route::get('/dashboard', function () {
