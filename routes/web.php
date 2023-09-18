@@ -18,9 +18,7 @@ use App\Http\Controllers\FornecedorController;
 |
 */
 
-Route::get('/', function () {
-    return 'AULA DE PW III';
-});
+
 
 Route::get('/quemsomos', function () {
     return 'Quem Somos';
@@ -47,12 +45,12 @@ require __DIR__.'/auth.php';
 Route::prefix('/admin')-> group (function(){
     Route::get('/clientes', function() {return 'Clientes';});
     // slide 76
-    Route::get('/fornecedores', 'App/Http/Controllers/FornecedorController@principal')->name('admin.fonercedores');
+    Route::get('/fornecedores', [FornecedorController::class, 'principal'])->name('admin.fonercedores');
     Route::get('/produtos', function() {return 'Produtos';});
 });
 
 // slide 27 e 57
-Route::get('/', 'App/Http/Controllers/PrincipalController@principal')->name('site.index');
+Route::get('/', [PrincipalController::class, 'principal'])->name('site.index');
 Route::get('/sobrenos', [SobreNosController::class, 'principal'])->name('site.sobrenos');
 Route::get('/contato', [ContatoController::class, 'principal'])->name('site.contato');
 
