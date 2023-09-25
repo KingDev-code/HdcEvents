@@ -25,7 +25,7 @@ Route::get('/quemsomos', function () {
 });
 
 Route::get('/contato', function () {
-    return 'contato';
+    return 'Essa rota não esta disponivel, envie o formulário da pagina principal para acessar essa pagina';
 });
 
 Route::get('/dashboard', function () {
@@ -52,7 +52,7 @@ Route::prefix('/admin')-> group (function(){
 // slide 27 e 57
 Route::get('/', [PrincipalController::class, 'principal'])->name('site.index');
 Route::get('/sobrenos', [SobreNosController::class, 'principal'])->name('site.sobrenos');
-Route::get('/contato', [ContatoController::class, 'principal'])->name('site.contato');
+Route::post('/contato', [ContatoController::class, 'contato'])->name('site.contato');
 
 // slide 62
 Route::fallback(function() {

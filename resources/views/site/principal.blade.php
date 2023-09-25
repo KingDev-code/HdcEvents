@@ -14,6 +14,7 @@
                     <span class="testo-branco">Gestão completa e descomplicada</span>
                 </div>
                 <div class="chamada">
+                    <!-- img src= "img/check.png" -->
                     <img src="{{ asset('img/check.png') }}">
                     <span class="texto-branco">Sua empresa na nuvem</span>
                 </div>
@@ -28,7 +29,7 @@
             <div class="contato">
                 <h1>Contato</h1>
                 <p>Caso tenha qualquer dúvida por favor entre em contato com nossa equipe pelo formulário</p>
-                @component('site.layouts._components.form.contato')
+                @component('site.layouts._components.form_contato')
                 @endcomponent
             </div>
         </div>

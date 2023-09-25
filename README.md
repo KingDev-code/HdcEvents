@@ -1,3 +1,5 @@
+PARA RODAR O PROJETO
+
 npm install
 
 composer install

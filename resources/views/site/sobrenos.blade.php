@@ -1,14 +1,7 @@
-<h3>CONTATO (view)</h3>
-<ul>
-    <li>
-        <a href="/"> PRINCIPAL </a>
-    </li>
+@extends('site.layouts.basico')
 
-    <li>
-        <a href="/sobrenos"> SOBRE NÓS </a>
-    </li>
+@section('titulo', 'Home')
 
-    <li>
-        <a href="/contato"> CONTATO </a>
-    </li>
-</ul>
+@section('conteudo')
+
+@endsection
